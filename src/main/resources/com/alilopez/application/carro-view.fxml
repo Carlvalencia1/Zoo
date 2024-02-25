@@ -6,53 +6,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.CarroController">
+<AnchorPane prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.CarroController">
    <children>
-      <Button fx:id="closeButton" layoutX="331.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="35.0" prefWidth="200.0" text="Cerrar">
+      <Label layoutX="103.0" layoutY="27.0" text="Modelo">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modeloTextfield" layoutX="103.0" layoutY="54.0" prefHeight="44.0" prefWidth="181.0" />
+      <Label layoutX="108.0" layoutY="101.0" text="Marca">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="marcaTextfield" layoutX="103.0" layoutY="136.0" prefHeight="50.0" prefWidth="181.0" />
+      <TextField fx:id="precioTextfield" layoutX="103.0" layoutY="228.0" prefHeight="50.0" prefWidth="181.0" />
+      <Label layoutX="108.0" layoutY="197.0" text="Precio">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" layoutX="114.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickSaveButton" prefHeight="44.0" prefWidth="174.0" text="Guardar">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="24.0" layoutY="45.0" text="Modelo">
+      <Label layoutX="306.0" layoutY="27.0" text="Año">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="modeloTextfield" layoutX="24.0" layoutY="72.0" prefHeight="44.0" prefWidth="181.0" />
-      <Label layoutX="24.0" layoutY="122.0" text="Marca">
+      <TextField fx:id="yearTextfield" layoutX="306.0" layoutY="54.0" prefHeight="44.0" prefWidth="181.0" />
+      <Label layoutX="306.0" layoutY="104.0" text="Numero de Puertas">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="marcaTextfield" layoutX="24.0" layoutY="154.0" prefHeight="50.0" prefWidth="181.0" />
-      <TextField fx:id="precioTextfield" layoutX="24.0" layoutY="246.0" prefHeight="50.0" prefWidth="181.0" />
-      <Label layoutX="24.0" layoutY="218.0" text="Precio">
+      <TextField fx:id="numPuertasTextfield" layoutX="306.0" layoutY="136.0" prefHeight="50.0" prefWidth="181.0" />
+      <TextField fx:id="tipoCarroceriaTextfield" layoutX="306.0" layoutY="228.0" prefHeight="50.0" prefWidth="181.0" />
+      <Label layoutX="306.0" layoutY="200.0" text="Tipo de Carroceria">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="saveButton" layoutX="74.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#onClickSaveButton" prefHeight="35.0" prefWidth="200.0" text="Guardar">
+      <Label fx:id="alertLabel" layoutX="188.0" layoutY="320.0" prefHeight="21.0" prefWidth="215.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="317.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="44.0" prefWidth="181.0" text="Cerrar">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="227.0" layoutY="45.0" text="Año">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="yearTextfield" layoutX="227.0" layoutY="72.0" prefHeight="44.0" prefWidth="181.0" />
-      <Label layoutX="227.0" layoutY="122.0" text="Numero de Puertas">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="numPuertasTextfield" layoutX="227.0" layoutY="154.0" prefHeight="50.0" prefWidth="181.0" />
-      <TextField fx:id="tipoCarroceriaTextfield" layoutX="227.0" layoutY="246.0" prefHeight="50.0" prefWidth="181.0" />
-      <Label layoutX="227.0" layoutY="218.0" text="Tipo de Carroceria">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

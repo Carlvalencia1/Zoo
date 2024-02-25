@@ -36,5 +36,10 @@
             <Font size="20.0" />
          </font>
       </Button>
+      <Label fx:id="alertLabel" layoutX="354.0" layoutY="159.0" prefHeight="21.0" prefWidth="215.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

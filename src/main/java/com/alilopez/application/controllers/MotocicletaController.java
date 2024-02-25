@@ -1,8 +1,11 @@
 package com.alilopez.application.controllers;
 
 import com.alilopez.application.App;
+import com.alilopez.application.models.Concesonaria;
+import com.alilopez.application.models.Motocicleta;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -10,6 +13,9 @@ public class MotocicletaController {
 
     @FXML
     private Button closeButton;
+
+    @FXML
+    private Label alertLabel;
 
     @FXML
     private TextField marcaTextfield;
@@ -39,7 +45,19 @@ public class MotocicletaController {
 
     @FXML
     void onClickSaveButton(MouseEvent event) {
-
+        String marca = marcaTextfield.getText();
+        String modelo = modeloTextfield.getText();
+        String manubrio = tipoManubrioTextfield.getText();
+        int precio = Integer.parseInt(precioTextfield.getText());
+        String tipoMoto = tipoMotoTextfield.getText();
+        int year = Integer.parseInt(yearTextfield.getText());
+        Motocicleta moto = new Motocicleta(modelo, marca, precio, year, tipoMoto, manubrio);
+        Concesonaria inventario = new Concesonaria();
+        if (inventario.addMoto(moto)){
+            alertLabel.setText("Se agregó exitosamente");
+        } else {
+            alertLabel.setText("No se pudo agregar");
+        }
     }
     @FXML
     void initialize() {

@@ -7,10 +7,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
-public class HomeController {
+import java.io.IOException;
+
+public class HomeVendedorController {
 
     @FXML
     private BottomNavigationButton addCarroButton;
+
+    @FXML
+    private BottomNavigationButton viewVentasButton;
+
+    @FXML
+    private BottomNavigationButton addVentaButton;
 
     @FXML
     private BottomNavigationButton addMotoButton;
@@ -53,8 +61,19 @@ public class HomeController {
     }
 
     @FXML
-    void onMouseClickExitButton(MouseEvent event) {
-        Platform.exit();
+    void onClickViewVentasButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void onClickAddVentaButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void onMouseClickExitButton(MouseEvent event) throws IOException {
+        App escena = new App();
+        escena.changeScene("login-view.fxml");
     }
     @FXML
     void initialize() {

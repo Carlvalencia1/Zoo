@@ -11,18 +11,24 @@ import org.kordamp.bootstrapfx.BootstrapFX;
 import java.io.IOException;
 
 public class App extends javafx.application.Application {
+    private static Stage escena;
     private static Stage stageView;
     private static Stage stageRoot;
     @Override
     public void start(Stage stage) throws IOException {
+        escena = stage;
         stageRoot = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
-        stage.setTitle("NameApplication - Home");
+        stage.setTitle("Concesonaria - LoginController");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
+    }
+    public void changeScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
+        escena.getScene().setRoot(pane);
     }
 
     public static void newStage(String fxml, String title) {
