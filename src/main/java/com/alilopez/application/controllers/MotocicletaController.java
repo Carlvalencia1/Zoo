@@ -6,25 +6,37 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-public class ClientController {
+public class MotocicletaController {
 
     @FXML
     private Button closeButton;
 
     @FXML
-    private Button saveButton;
-    @FXML
-    private TextField lastnameTextfield;
+    private TextField marcaTextfield;
 
     @FXML
-    private TextField nombreTextfield;
+    private TextField modeloTextfield;
+
+    @FXML
+    private TextField precioTextfield;
+
+    @FXML
+    private Button saveButton;
+
+    @FXML
+    private TextField tipoManubrioTextfield;
+
+    @FXML
+    private TextField tipoMotoTextfield;
+
+    @FXML
+    private TextField yearTextfield;
 
     @FXML
     void onClickCloseButton(MouseEvent event) {
         App.getStageView().close();
     }
-    @FXML
-    private TextField telefonoTextfield;
+
     @FXML
     void onClickSaveButton(MouseEvent event) {
 
