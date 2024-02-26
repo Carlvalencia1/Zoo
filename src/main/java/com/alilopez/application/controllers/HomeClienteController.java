@@ -59,5 +59,9 @@ public class HomeClienteController {
     void initialize() {
         closeButton.getStyleClass().setAll("btn","btn-danger");
         closeButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
+        viewCarrosButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        viewCarrosButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
+        viewMotosButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        viewMotosButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
     }
 }

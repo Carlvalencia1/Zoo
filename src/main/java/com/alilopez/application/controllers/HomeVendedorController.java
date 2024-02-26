@@ -128,5 +128,21 @@ public class HomeVendedorController {
     void initialize() {
         exitButton.getStyleClass().setAll("btn","btn-gl","btn-success");
         exitButton.setStyle("-fx-font-size: 20px; -fx-font-weight: 900; -fx-alignment: center;");
+        addMotoButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        addMotoButton.setStyle("-fx-alignment: center;");
+        addCarroButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        addCarroButton.setStyle("-fx-alignment: center;");
+        addClientButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        addClientButton.setStyle("-fx-alignment: center;");
+        addVentaButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        addVentaButton.setStyle("-fx-alignment: center;");
+        clientesButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        clientesButton.setStyle("-fx-alignment: center;");
+        viewAvailableCarsButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        viewAvailableCarsButton.setStyle("-fx-alignment: center;");
+        viewAvailableMotosButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        viewAvailableMotosButton.setStyle("-fx-alignment: center;");
+        viewVentasButton.getStyleClass().setAll("btn","btn-gl","btn-primary");
+        viewVentasButton.setStyle("-fx-alignment: center;");
     }
 }

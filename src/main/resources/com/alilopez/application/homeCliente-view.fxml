@@ -4,11 +4,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.HomeClienteController">
    <children>
-      <Button fx:id="viewCarrosButton" layoutX="331.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#onClickViewCarrosButton" prefHeight="44.0" prefWidth="167.0" text="Ver los carros disponibles" />
-      <Button fx:id="viewMotosButton" layoutX="778.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#onClickViewMotosButton" prefHeight="44.0" prefWidth="173.0" text="Ver las motos disponibles" />
+      <Button fx:id="viewCarrosButton" layoutX="241.0" layoutY="294.0" mnemonicParsing="false" onMouseClicked="#onClickViewCarrosButton" prefHeight="63.0" prefWidth="304.0" text="Ver los carros disponibles" />
+      <Button fx:id="viewMotosButton" layoutX="731.0" layoutY="294.0" mnemonicParsing="false" onMouseClicked="#onClickViewMotosButton" prefHeight="63.0" prefWidth="320.0" text="Ver las motos disponibles" />
       <Button fx:id="closeButton" layoutX="967.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="35.0" prefWidth="200.0" text="Cerrar">
          <font>
             <Font size="20.0" />
