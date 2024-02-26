@@ -1,5 +1,6 @@
 package com.alilopez.application;
 
+import com.alilopez.application.models.Concesonaria;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,12 +12,11 @@ import org.kordamp.bootstrapfx.BootstrapFX;
 import java.io.IOException;
 
 public class App extends javafx.application.Application {
-    private static Stage escena;
     private static Stage stageView;
     private static Stage stageRoot;
+    private static Concesonaria concesonaria = new Concesonaria();
     @Override
     public void start(Stage stage) throws IOException {
-        escena = stage;
         stageRoot = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -28,7 +28,7 @@ public class App extends javafx.application.Application {
     }
     public void changeScene(String fxml) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource(fxml));
-        escena.getScene().setRoot(pane);
+        stageRoot.getScene().setRoot(pane);
     }
 
     public static void newStage(String fxml, String title) {
@@ -60,5 +60,8 @@ public class App extends javafx.application.Application {
     public static void main(String[] args) {
         launch();
         System.exit(1);
+    }
+    public static Concesonaria getConcesonaria() {
+        return concesonaria;
     }
 }

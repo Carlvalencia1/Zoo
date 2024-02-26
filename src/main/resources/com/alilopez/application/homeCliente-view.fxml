@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.alilopez.application.controllers.ClientController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.HomeClienteController">
+   <children>
+      <Button fx:id="viewCarrosButton" layoutX="331.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#onClickViewCarrosButton" prefHeight="44.0" prefWidth="167.0" text="Ver los carros disponibles" />
+      <Button fx:id="viewMotosButton" layoutX="778.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#onClickViewMotosButton" prefHeight="44.0" prefWidth="173.0" text="Ver las motos disponibles" />
+      <Button fx:id="closeButton" layoutX="967.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="35.0" prefWidth="200.0" text="Cerrar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

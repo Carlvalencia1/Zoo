@@ -1,16 +1,16 @@
 package com.alilopez.application.models;
 
+import java.util.UUID;
+
 public class Venta {
     private double monto;
     private String modelo;
     private String marca;
-    private Cliente client;
 
-    public Venta(double monto, String modelo, String marca, Cliente client) {
+    public Venta(double monto, String modelo, String marca) {
         this.monto = monto;
         this.modelo = modelo;
         this.marca = marca;
-        this.client = client;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Venta {
                 "monto=" + monto +
                 ", modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
-                ", client=" + client +
                 '}';
     }
+
 }

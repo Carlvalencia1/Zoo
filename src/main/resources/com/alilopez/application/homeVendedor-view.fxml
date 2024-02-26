@@ -16,12 +16,17 @@
                         <Icon content="RECENT_ACTORS" />
                     </graphic>
                 </BottomNavigationButton>
-                <BottomNavigationButton fx:id="inventoryButton" onMouseClicked="#onClickInventoryButton" text="Ver Inventario">
+            <BottomNavigationButton fx:id="viewVentasButton" layoutX="650.0" layoutY="10.0" onMouseClicked="#onClickViewVentasButton" text="Ver Ventas">
+               <graphic>
+                  <Icon content="FAVORITE" />
+               </graphic>
+            </BottomNavigationButton>
+                <BottomNavigationButton fx:id="viewAvailableCarsButton" onMouseClicked="#onClickViewAvailableCarsButton" text="Ver Carros Disponibles">
                     <graphic>
                         <Icon content="FAVORITE" />
                     </graphic>
                 </BottomNavigationButton>
-            <BottomNavigationButton fx:id="viewVentasButton" layoutX="650.0" layoutY="10.0" onMouseClicked="#onClickViewVentasButton" text="Ver Ventas">
+            <BottomNavigationButton fx:id="viewAvailableMotosButton" layoutX="566.0" layoutY="10.0" onMouseClicked="#onClickViewAvailableMotosButton" text="Ver motos disponibles">
                <graphic>
                   <Icon content="FAVORITE" />
                </graphic>

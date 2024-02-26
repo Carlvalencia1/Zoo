@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.util.UUID;
+
 public class MotocicletaController {
 
     @FXML
@@ -51,10 +53,11 @@ public class MotocicletaController {
         int precio = Integer.parseInt(precioTextfield.getText());
         String tipoMoto = tipoMotoTextfield.getText();
         int year = Integer.parseInt(yearTextfield.getText());
-        Motocicleta moto = new Motocicleta(modelo, marca, precio, year, tipoMoto, manubrio);
-        Concesonaria inventario = new Concesonaria();
-        if (inventario.addMoto(moto)){
-            alertLabel.setText("Se agregó exitosamente");
+        UUID id = UUID.randomUUID();
+        String randomId = id.toString();
+        Motocicleta moto = new Motocicleta(modelo, marca, precio, year, tipoMoto, manubrio, randomId);
+        if (App.getConcesonaria().addMoto(moto)){
+            alertLabel.setText("ID generado: " + randomId);
         } else {
             alertLabel.setText("No se pudo agregar");
         }

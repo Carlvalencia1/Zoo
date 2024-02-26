@@ -9,9 +9,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.util.UUID;
+
 public class CarroController {
     @FXML
     private Label alertLabel;
+
     @FXML
     private Button closeButton;
 
@@ -49,10 +52,11 @@ public class CarroController {
         int precio = Integer.parseInt(precioTextfield.getText());
         int puertas = Integer.parseInt(numPuertasTextfield.getText());
         int year = Integer.parseInt(yearTextfield.getText());
-        Carro car = new Carro(modelo, marca, precio, year, puertas, carroceria);
-        Concesonaria inventario = new Concesonaria();
-        if (inventario.addCarro(car)){
-            alertLabel.setText("Se agregó exitosamente");
+        UUID id = UUID.randomUUID();
+        String randomId = id.toString();
+        Carro car = new Carro(modelo, marca, precio, year, puertas, carroceria, randomId);
+        if (App.getConcesonaria().addCarro(car)){
+            alertLabel.setText("ID generado: " + randomId);
         } else {
             alertLabel.setText("No se pudo agregar");
         }

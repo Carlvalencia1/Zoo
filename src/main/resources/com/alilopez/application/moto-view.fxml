@@ -54,9 +54,9 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="alertLabel" layoutX="198.0" layoutY="330.0" prefHeight="21.0" prefWidth="215.0">
+      <Label fx:id="alertLabel" layoutX="103.0" layoutY="330.0" prefHeight="21.0" prefWidth="378.0" style="-fx-alignment: center;" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
    </children>

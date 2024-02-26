@@ -38,8 +38,7 @@ public class ClientController {
         String apellido = lastnameTextfield.getText();
         int telefono = Integer.parseInt(telefonoTextfield.getText());
         Cliente cliente = new Cliente(nombre, apellido, telefono);
-        Concesonaria list = new Concesonaria();
-        if (list.addClient(cliente)){
+        if (App.getConcesonaria().addClient(cliente)){
             alertLabel.setText("Se agregó exitosamente");
         } else {
             alertLabel.setText("No se pudo agregar");

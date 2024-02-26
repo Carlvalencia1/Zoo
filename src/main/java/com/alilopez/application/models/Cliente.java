@@ -1,7 +1,9 @@
 package com.alilopez.application.models;
 
+
+import java.util.UUID;
+
 public class Cliente {
-    private int id;
     private String name;
     private String lastName;
     private int telefono;
@@ -15,7 +17,6 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", telefono=" + telefono +

@@ -26,7 +26,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="saveButton" layoutX="114.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickSaveButton" prefHeight="44.0" prefWidth="174.0" text="Guardar">
+      <Button fx:id="saveButton" layoutX="103.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickSaveButton" prefHeight="44.0" prefWidth="174.0" text="Guardar">
          <font>
             <Font size="20.0" />
          </font>
@@ -49,12 +49,12 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="alertLabel" layoutX="188.0" layoutY="320.0" prefHeight="21.0" prefWidth="215.0">
+      <Label fx:id="alertLabel" layoutX="105.0" layoutY="320.0" prefHeight="21.0" prefWidth="388.0" style="-fx-alignment: center;" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="317.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="44.0" prefWidth="181.0" text="Cerrar">
+      <Button fx:id="closeButton" layoutX="312.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="44.0" prefWidth="181.0" text="Cerrar">
          <font>
             <Font size="20.0" />
          </font>
