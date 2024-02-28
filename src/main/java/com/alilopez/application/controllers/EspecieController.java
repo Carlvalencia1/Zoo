@@ -1,16 +1,14 @@
 package com.alilopez.application.controllers;
 
 import com.alilopez.application.App;
-import com.alilopez.application.models.Cliente;
-import com.alilopez.application.models.Concesonaria;
+import com.alilopez.application.models.Especie;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-public class ClientController {
+public class EspecieController {
 
     @FXML
     private Button closeButton;
@@ -35,13 +33,13 @@ public class ClientController {
     @FXML
     void onClickSaveButton(MouseEvent event) {
         String nombre = nombreTextfield.getText();
-        String apellido = lastnameTextfield.getText();
-        int telefono = Integer.parseInt(telefonoTextfield.getText());
-        Cliente cliente = new Cliente(nombre, apellido, telefono);
-        if (App.getConcesonaria().addClient(cliente)){
-            alertLabel.setText("Se agregó exitosamente");
+        String especie = lastnameTextfield.getText();
+        int tnumeroHabitat = Integer.parseInt(telefonoTextfield.getText());
+        Especie empleado = new Especie(nombre, especie, tnumeroHabitat);
+        if (App.getZoologico().addClient(empleado)){
+            alertLabel.setText("Se agrego especie");
         } else {
-            alertLabel.setText("No se pudo agregar");
+            alertLabel.setText("No se pudo agregar especie");
         }
     }
     @FXML

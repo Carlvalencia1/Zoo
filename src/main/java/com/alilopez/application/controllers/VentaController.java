@@ -1,9 +1,6 @@
 package com.alilopez.application.controllers;
 
 import com.alilopez.application.App;
-import com.alilopez.application.models.Concesonaria;
-import com.alilopez.application.models.Motocicleta;
-import com.alilopez.application.models.Venta;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -32,10 +29,10 @@ public class VentaController {
     @FXML
     void onClickSaveButton(MouseEvent event) {
         String id = idTextfield.getText();
-        if (App.getConcesonaria().addVenta(id)){
+        if (App.getZoologico().addVenta(id)){
             alertLabel.setText("Se agregó exitosamente");
         } else {
-            alertLabel.setText("No se pudo agregar");
+            alertLabel.setText("No se logro agregar");
         }
     }
     @FXML

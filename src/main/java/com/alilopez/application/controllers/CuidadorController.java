@@ -1,8 +1,7 @@
 package com.alilopez.application.controllers;
 
 import com.alilopez.application.App;
-import com.alilopez.application.models.Carro;
-import com.alilopez.application.models.Concesonaria;
+import com.alilopez.application.models.Cuidador;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,12 +10,13 @@ import javafx.scene.input.MouseEvent;
 
 import java.util.UUID;
 
-public class CarroController {
-    @FXML
-    private Label alertLabel;
+public class CuidadorController {
 
     @FXML
     private Button closeButton;
+
+    @FXML
+    private Label alertLabel;
 
     @FXML
     private TextField marcaTextfield;
@@ -25,16 +25,16 @@ public class CarroController {
     private TextField modeloTextfield;
 
     @FXML
-    private TextField numPuertasTextfield;
-
-    @FXML
     private TextField precioTextfield;
 
     @FXML
     private Button saveButton;
 
     @FXML
-    private TextField tipoCarroceriaTextfield;
+    private TextField tipoManubrioTextfield;
+
+    @FXML
+    private TextField tipoMotoTextfield;
 
     @FXML
     private TextField yearTextfield;
@@ -46,16 +46,16 @@ public class CarroController {
 
     @FXML
     void onClickSaveButton(MouseEvent event) {
-        String marca = marcaTextfield.getText();
-        String modelo = modeloTextfield.getText();
-        String carroceria = tipoCarroceriaTextfield.getText();
-        int precio = Integer.parseInt(precioTextfield.getText());
-        int puertas = Integer.parseInt(numPuertasTextfield.getText());
-        int year = Integer.parseInt(yearTextfield.getText());
+        String nombre = marcaTextfield.getText();
+        String apellido = modeloTextfield.getText();
+        String tipoEspecie = tipoManubrioTextfield.getText();
+        int edad = Integer.parseInt(precioTextfield.getText());
+        int consultorioAsignado = Integer.parseInt(tipoMotoTextfield.getText());
+        int habitat = Integer.parseInt(yearTextfield.getText());
         UUID id = UUID.randomUUID();
         String randomId = id.toString();
-        Carro car = new Carro(modelo, marca, precio, year, puertas, carroceria, randomId);
-        if (App.getConcesonaria().addCarro(car)){
+        Cuidador moto = new Cuidador(nombre, apellido, edad, habitat, tipoEspecie, consultorioAsignado, randomId);
+        if (App.getZoologico().addMoto(moto)){
             alertLabel.setText("ID generado: " + randomId);
         } else {
             alertLabel.setText("No se pudo agregar");
