@@ -1,8 +1,8 @@
 package com.alilopez.application.controllers;
 
 import com.alilopez.application.App;
-import com.alilopez.application.models.Carro;
-import com.alilopez.application.models.Motocicleta;
+import com.alilopez.application.models.Veterinario;
+import com.alilopez.application.models.Cuidador;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -30,13 +30,13 @@ public class HomeClienteController {
 
     @FXML
     void onClickViewCarrosButton(MouseEvent event) {
-        ArrayList<Carro> carros = App.getConcesonaria().getListaCarros();
-        StringBuilder contenido = new StringBuilder("Lista de Carros:\n");
+        ArrayList<Veterinario> carros = App.getZoologico().getListaVeterinario();
+        StringBuilder contenido = new StringBuilder("Lista de Veterinarios:\n");
         for (int i = 0; i < carros.size(); i++) {
             contenido.append(i+1).append(".- ").append(carros.get(i));
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Carros Disponibles");
+        alert.setTitle("Veterinarios Asignados");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();
@@ -44,13 +44,13 @@ public class HomeClienteController {
 
     @FXML
     void onClickViewMotosButton(MouseEvent event) {
-        ArrayList<Motocicleta> motocicletas = App.getConcesonaria().getListaMotos();
-        StringBuilder contenido = new StringBuilder("Lista de Motocicletas:\n");
+        ArrayList<Cuidador> motocicletas = App.getZoologico().getListaCuidador();
+        StringBuilder contenido = new StringBuilder("Lista de Cuidadores:\n");
         for (int i = 0; i < motocicletas.size(); i++) {
             contenido.append(i+1).append(".- ").append(motocicletas.get(i));
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Motocicletas Disponibles");
+        alert.setTitle("Cudadores Asigandos");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();

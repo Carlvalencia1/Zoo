@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.HomeVendedorController">
+    <children>
+        <BottomNavigation layoutX="82.0" layoutY="43.0" prefHeight="91.0" prefWidth="1088.0" style="-fx-background-color: #ED791E;">
+            <actionItems>
+            <BottomNavigationButton fx:id="addCarroButton" onMouseClicked="#onClickAddCarroButton" text="Añadir Veterinario" />
+            <BottomNavigationButton fx:id="addVentaButton" onMouseClicked="#onClickAddVentaButton" prefHeight="50.0" prefWidth="168.0" selected="true" text="Añadir Cambio" />
+            <BottomNavigationButton fx:id="addClientButton" onMouseClicked="#onClickAddClienteButton" prefHeight="50.0" prefWidth="188.0" selected="true" text="Añadir Especie" />
+            <BottomNavigationButton fx:id="addMotoButton" onMouseClicked="#onClickAddMotoButton" selected="true" text=" Añadir Cuidador" />
+            </actionItems>
+        </BottomNavigation>
+        <Button fx:id="exitButton" layoutX="950.0" layoutY="608.0" mnemonicParsing="false" onMouseClicked="#onMouseClickExitButton" prefHeight="50.0" prefWidth="300.0" text="Salir" />
+      <AnchorPane layoutX="82.0" layoutY="134.0" prefHeight="462.0" prefWidth="1088.0" style="-fx-background-color: #B8BBBA;">
+         <children>
+            <Label layoutX="431.0" layoutY="23.0" prefHeight="27.0" prefWidth="212.0" style="-fx-alignment: center;" text="Bienvenido al sistema" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="372.0" layoutY="169.0" prefHeight="38.0" prefWidth="427.0" style="-fx-alignment: center;" text="Recuerda añadir las espcies correspondientes." textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+                <BottomNavigationButton fx:id="clientesButton" layoutX="178.0" layoutY="80.0" onMouseClicked="#onClickClientesButton" prefHeight="64.0" prefWidth="177.0" selected="true" text=" Ver Especie" />
+                <BottomNavigationButton fx:id="viewAvailableCarsButton" layoutX="178.0" onMouseClicked="#onClickViewAvailableCarsButton" prefHeight="80.0" prefWidth="177.0" text="Ver veterinario" />
+            <BottomNavigationButton fx:id="viewAvailableMotosButton" layoutX="1.0" onMouseClicked="#onClickViewAvailableMotosButton" prefHeight="80.0" prefWidth="177.0" style="-fx-background-color: #f30808;" text="Ver cuidadores" />
+            <BottomNavigationButton fx:id="viewVentasButton" layoutX="1.0" layoutY="80.0" onMouseClicked="#onClickViewVentasButton" prefHeight="64.0" prefWidth="177.0" text="Cambios de Zoo" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="378.0" layoutY="5.0" prefHeight="17.0" prefWidth="327.0" style="-fx-alignment: center;" text="Sistema del Zoológico" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

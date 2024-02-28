@@ -40,7 +40,7 @@ public class LoginController {
     @FXML
     void onClickClienteButton(MouseEvent event) throws IOException {
         App escena = new App();
-        escena.changeScene("homeCliente-view.fxml");
+        escena.changeScene("homeEmpleado-view.fxml");
     }
 
     @FXML
@@ -50,7 +50,7 @@ public class LoginController {
         String password = contraTextField.getText();
         Login user = new Login();
         if (user.checkLogin(usuario, password)){
-            escena.changeScene("homeVendedor-view.fxml");
+            escena.changeScene("homeAdmin-view.fxml");
         } else {
             wrongDataLabel.setVisible(true);
             wrongDataLabel.setText("Datos Incorrectos");

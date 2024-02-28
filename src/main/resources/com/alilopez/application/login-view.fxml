@@ -11,20 +11,20 @@
    <children>
       <TextField fx:id="usuarioTextField" layoutX="606.0" layoutY="297.0" prefHeight="31.0" prefWidth="162.0" promptText="vendedor" />
       <Label layoutX="39.0" layoutY="210.0" />
-      <Label fx:id="titleLabel" layoutX="530.0" layoutY="160.0" text="Concesonario">
+      <Label fx:id="titleLabel" layoutX="530.0" layoutY="160.0" text="ZOOLÓGICO">
          <font>
-            <Font name="Roboto Bold" size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <PasswordField fx:id="contraTextField" layoutX="606.0" layoutY="351.0" prefHeight="31.0" prefWidth="162.0" promptText="123" />
-      <Button fx:id="loginButton" layoutX="605.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#onClickLoginButton" text="Iniciar Sesión" />
-      <Button fx:id="clienteButton" layoutX="611.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#onClickClienteButton" text="Soy Cliente" />
-      <Label fx:id="userLabel" layoutX="486.0" layoutY="303.0" text="Usuario">
+      <PasswordField fx:id="contraTextField" layoutX="605.0" layoutY="382.0" prefHeight="31.0" prefWidth="162.0" promptText="123" />
+      <Button fx:id="loginButton" layoutX="605.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#onClickLoginButton" text="Iniciar Sesión" />
+      <Button fx:id="clienteButton" layoutX="610.0" layoutY="484.0" mnemonicParsing="false" onMouseClicked="#onClickClienteButton" text="Soy Empleado" />
+      <Label fx:id="userLabel" layoutX="630.0" layoutY="252.0" text="Usuario">
          <font>
             <Font name="Roboto Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="passLabel" layoutX="472.0" layoutY="357.0" text="Contraseña">
+      <Label fx:id="passLabel" layoutX="617.0" layoutY="338.0" text="Contraseña">
          <font>
             <Font name="Roboto Bold" size="16.0" />
          </font>

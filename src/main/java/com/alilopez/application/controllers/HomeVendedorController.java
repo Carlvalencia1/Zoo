@@ -3,7 +3,6 @@ package com.alilopez.application.controllers;
 import com.alilopez.application.App;
 import com.alilopez.application.models.*;
 import com.gluonhq.charm.glisten.control.BottomNavigationButton;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -43,28 +42,28 @@ public class HomeVendedorController {
 
     @FXML
     void onClickAddCarroButton(MouseEvent event) {
-        App.newStage("carro-view", "App - View Carro");
+        App.newStage("veterinario-view", "App - View Veterinario");
     }
 
     @FXML
     void onClickAddClienteButton(MouseEvent event) {
-        App.newStage("client-view", "App - View Client");
+        App.newStage("especie-view", "App - View Especie");
     }
 
     @FXML
     void onClickAddMotoButton(MouseEvent event) {
-        App.newStage("moto-view", "App - View Moto");
+        App.newStage("cuidador-view", "App - View Cuidador");
     }
 
     @FXML
     void onClickClientesButton(MouseEvent event) {
-        ArrayList<Cliente> clientes = App.getConcesonaria().getClients();
-        StringBuilder contenido = new StringBuilder("Lista de Clientes:\n");
+        ArrayList<Especie> clientes = App.getZoologico().getClients();
+        StringBuilder contenido = new StringBuilder("Lista de Especies:\n");
         for (int i = 0; i < clientes.size(); i++) {
             contenido.append(i+1).append(".- ").append(clientes.get(i)).append("\n");
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Clientes Registrados");
+        alert.setTitle("Especies Registradas");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();
@@ -72,14 +71,14 @@ public class HomeVendedorController {
 
     @FXML
     void onClickViewAvailableCarsButton(MouseEvent event) {
-        ArrayList<Carro> carros = App.getConcesonaria().getListaCarros();
-        StringBuilder contenido = new StringBuilder("Lista de Carros:\n");
+        ArrayList<Veterinario> carros = App.getZoologico().getListaVeterinario();
+        StringBuilder contenido = new StringBuilder("Lista de Veterinarios:\n");
         for (int i = 0; i < carros.size(); i++) {
             contenido.append(i+1).append(".- ").append(carros.get(i)).append(" ").append(carros.get(i).getId()).append("\n");
             System.out.println(carros.get(i).getId());
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Carros Disponibles");
+        alert.setTitle("Veterinarios:");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();
@@ -87,14 +86,14 @@ public class HomeVendedorController {
 
     @FXML
     void onClickViewAvailableMotosButton(MouseEvent event) {
-        ArrayList<Motocicleta> motocicletas = App.getConcesonaria().getListaMotos();
-        StringBuilder contenido = new StringBuilder("Lista de Motocicletas:\n");
+        ArrayList<Cuidador> motocicletas = App.getZoologico().getListaCuidador();
+        StringBuilder contenido = new StringBuilder("Lista de Cuidadores:\n");
         for (int i = 0; i < motocicletas.size(); i++) {
             contenido.append(i+1).append(".- ").append(motocicletas.get(i)).append(" ").append(motocicletas.get(i).getId()).append("\n");
             System.out.println(motocicletas.get(i).getId());
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Motocicletas Disponibles");
+        alert.setTitle("Cuidadores");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();
@@ -102,13 +101,13 @@ public class HomeVendedorController {
 
     @FXML
     void onClickViewVentasButton(MouseEvent event) {
-        ArrayList<Venta> ventas = App.getConcesonaria().getSales();
-        StringBuilder contenido = new StringBuilder("Lista de Ventas:\n");
+        ArrayList<Venta> ventas = App.getZoologico().getSales();
+        StringBuilder contenido = new StringBuilder("Lista de cmabios de Zoo:\n");
         for (int i = 0; i < ventas.size(); i++) {
             contenido.append(i+1).append(".- ").append(ventas.get(i)).append("\n");
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Ventas Disponibles");
+        alert.setTitle("Cambios");
         alert.setHeaderText(null);
         alert.setContentText(contenido.toString());
         alert.showAndWait();

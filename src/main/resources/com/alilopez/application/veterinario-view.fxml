@@ -6,22 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.CarroController">
+<AnchorPane prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alilopez.application.controllers.VeterinarioController">
    <children>
-      <Label layoutX="103.0" layoutY="27.0" text="Modelo">
+      <Label layoutX="14.0" layoutY="66.0" text="Nombre:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <TextField fx:id="modeloTextfield" layoutX="103.0" layoutY="54.0" prefHeight="44.0" prefWidth="181.0" />
-      <Label layoutX="108.0" layoutY="101.0" text="Marca">
+      <Label layoutX="14.0" layoutY="151.0" text="Apellido:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <TextField fx:id="marcaTextfield" layoutX="103.0" layoutY="136.0" prefHeight="50.0" prefWidth="181.0" />
       <TextField fx:id="precioTextfield" layoutX="103.0" layoutY="228.0" prefHeight="50.0" prefWidth="181.0" />
-      <Label layoutX="108.0" layoutY="197.0" text="Precio">
+      <Label layoutX="26.0" layoutY="243.0" text="Edad:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -31,20 +31,20 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="306.0" layoutY="27.0" text="Año">
+      <Label layoutX="340.0" layoutY="27.0" prefHeight="21.0" prefWidth="181.0" text="No. de hábitat encargada">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="yearTextfield" layoutX="306.0" layoutY="54.0" prefHeight="44.0" prefWidth="181.0" />
-      <Label layoutX="306.0" layoutY="104.0" text="Numero de Puertas">
+      <TextField fx:id="yearTextfield" layoutX="353.0" layoutY="55.0" prefHeight="44.0" prefWidth="181.0" />
+      <Label layoutX="356.0" layoutY="107.0" prefHeight="21.0" prefWidth="174.0" text="No. Consultorio">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="numPuertasTextfield" layoutX="306.0" layoutY="136.0" prefHeight="50.0" prefWidth="181.0" />
-      <TextField fx:id="tipoCarroceriaTextfield" layoutX="306.0" layoutY="228.0" prefHeight="50.0" prefWidth="181.0" />
-      <Label layoutX="306.0" layoutY="200.0" text="Tipo de Carroceria">
+      <TextField fx:id="numPuertasTextfield" layoutX="349.0" layoutY="136.0" prefHeight="50.0" prefWidth="181.0" />
+      <TextField fx:id="tipoCarroceriaTextfield" layoutX="349.0" layoutY="229.0" prefHeight="50.0" prefWidth="181.0" />
+      <Label layoutX="380.0" layoutY="199.0" text="No. pacientes ">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
